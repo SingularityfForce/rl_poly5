@@ -1,0 +1,8 @@
+seed: 7
+log_level: INFO
+micro_paths:
+  - microstructure-5m-1772372127598.jsonl
+  - microstructure-5m-1772397985117.jsonl.zip
+summary_path: cycle-summary-5m-1772397985623.jsonl
+dataset_path: artifacts/dataset.parquet
+winner_policy: exclude
