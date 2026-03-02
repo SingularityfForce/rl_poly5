@@ -1,0 +1,32 @@
+seed: 7
+dataset_path: artifacts/dataset.parquet
+feature_cols:
+  - implied_up
+  - thinness
+  - spread_asym
+  - depth_asym
+  - quoteRate
+  - time_left_frac
+  - d_UP_bid
+  - d_DOWN_bid
+train_frac: 0.7
+val_frac: 0.15
+action_every_n_ticks: 2
+outdir: artifacts/rl
+fee_bps: 1.0
+slippage_bps: 2.0
+maker_regime: base
+max_active_orders: 4
+stale_penalty: 0.0003
+inventory_penalty: 0.0001
+null_winner_policy: zero
+missing_policy: reject
+train_episodes: 30
+batch_size: 32
+buffer_size: 5000
+lr: 0.001
+gamma: 0.99
+eps_start: 1.0
+eps_end: 0.1
+eps_decay: 400
+target_update: 150

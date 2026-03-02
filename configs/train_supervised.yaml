@@ -1,0 +1,15 @@
+seed: 7
+dataset_path: artifacts/dataset.parquet
+feature_cols:
+  - implied_up
+  - thinness
+  - spread_asym
+  - depth_asym
+  - quoteRate
+  - time_left_frac
+  - d_UP_bid
+  - d_DOWN_bid
+train_frac: 0.7
+val_frac: 0.15
+action_every_n_ticks: 2
+outdir: artifacts/supervised

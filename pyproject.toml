@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rl-hybrid-binary"
+version = "0.1.0"
+description = "Hybrid maker/taker RL research framework for 5m binary crypto markets"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "gymnasium>=0.29",
+  "torch>=2.1",
+  "scikit-learn>=1.4",
+  "pyyaml>=6.0",
+  "matplotlib>=3.8",
+  "typer>=0.12",
+  "pydantic>=2.6",
+  "pytest>=8.0",
+  "joblib>=1.3"
+]
+
+[project.scripts]
+rlhyb = "rl_hybrid.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
